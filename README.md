@@ -12,6 +12,8 @@ module "vnet1" {
   
   vnet_name                         = "exmp_vnet"
   
+  vnet_num                          = 2
+  
   addr_space                        = ["10.0.0.0/16"]
   
   location                          = azurerm_resource_group.{resource group ID}.location
