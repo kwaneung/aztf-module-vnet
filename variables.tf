@@ -9,3 +9,11 @@ variable "vnet_name" {
 variable "addr_space" {
   description = "vnet address space"        
 }
+
+variable "location" {
+  description = "location"        
+}
+
+variable "name" {
+  description = "resource_group_name"        
+}
