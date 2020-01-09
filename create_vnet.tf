@@ -7,6 +7,6 @@ resource "azurerm_virtual_network" "example" {
   address_space       = var.addr_space
 
   tags = {
-    var.tag_key = var.tag_value
+    (var.tag_key) = var.tag_value
   }
 }
