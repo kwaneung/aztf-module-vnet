@@ -1,5 +1,5 @@
 # aztf-module-vnet
-Azure Terraform Module for Virtual Machine
+Azure Terraform Module for Virtual Network
 
 Example) Create vnet
 ```
