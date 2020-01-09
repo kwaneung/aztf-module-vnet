@@ -6,6 +6,10 @@ variable "vnet_name" {
   description = "vnet name"        
 }
 
+variable "vnet_num" {
+  description = "Number of Vnets to create"        
+}
+
 variable "addr_space" {
   description = "vnet address space"        
 }
