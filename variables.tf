@@ -28,4 +28,4 @@ variable "tag_key" {
 
 variable "tag_value" {
   description = "Value name of tag"        
-  }
+}
