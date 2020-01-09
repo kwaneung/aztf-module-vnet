@@ -12,5 +12,9 @@ module "vnet1" {
   
   addr_space                        = "10.0.0.0/16"
   
+  location                          = azurerm_resource_group.{resource group ID}.location
+
+  rg_name                           = azurerm_resource_group.{resource group ID}.name
+  
 }
 ```
