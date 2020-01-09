@@ -14,6 +14,6 @@ variable "location" {
   description = "location"        
 }
 
-variable "name" {
+variable "rg_name" {
   description = "resource_group_name"        
 }
