@@ -11,11 +11,9 @@ variable "addr_space" {
 }
 
 variable "location" {
-  default = "koreacentral"
   description = "location"        
 }
 
 variable "rg_name" {
-  default = "rg_test01"
   description = "resource_group_name"        
 }
