@@ -1,6 +1,8 @@
 # aztf-module-vnet
 Azure Terraform Module for Virtual Network
 
+Resource group must be created first.
+
 Example) Create vnet
 ```
 module "vnet1" {
