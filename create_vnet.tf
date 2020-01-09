@@ -7,6 +7,6 @@ resource "azurerm_virtual_network" "example" {
   address_space       = var.addr_space
 
   tags = {
-    environment = "Production"
+    var.tagid = var.tagname
   }
 }
