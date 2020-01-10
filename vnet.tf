@@ -25,10 +25,5 @@ module "subnet" {
 
   rg_name                           = var.rg_name
   
-  vnet_name                         = var.vnet_name
-  
-  tag_key                           = "05"
-
-  tag_value                         = "is"
-  
+  vnet_name                         = var.vnet_name 
 }
