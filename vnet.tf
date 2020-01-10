@@ -1,12 +1,8 @@
-resource "azurerm_virtual_network" "example_vnet" {
-  count               = var.vnet_num
-  
-  name           			= var.vnet_num == 1 ?  format("%s_%s", "vnet", var.vnet_name): format("%s_%s_%02d", "vnet", var.vnet_name, count.index + 1)
-  location            = var.location
-  resource_group_name = var.rg_name
-  address_space       = var.addr_space
-
-  tags = {
-    (var.tag_key) = var.tag_value
-  }
+resource "azurerm_virtual_network" "vnet" {
+  name                = "${var.vnet_name}"
+  location            = "${var.location}"
+  address_space       = ["${var.address_space}"]
+  resource_group_name = "${azurerm_resource_group.vnet.name}"
+  dns_servers         = "${var.dns_servers}"
+  tags                = "${var.tags}"
 }
