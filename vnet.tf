@@ -10,3 +10,25 @@ resource "azurerm_virtual_network" "example" {
     (var.tag_key) = var.tag_value
   }
 }
+
+
+module "subnet" {
+  source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
+
+  prefix                            = "exmp"
+  
+  subnet_name                       = "exmp_subnet"
+  
+  subnet_num                        = 1
+  
+  addr_prefix                       = "10.0.0.0/24"
+
+  rg_name                           = azurerm_resource_group.rg_test01.name
+  
+  vnet_name                         = azurerm_virtual_network.example.name
+  
+  tag_key                           = "05"
+
+  tag_value                         = "is"
+  
+}
