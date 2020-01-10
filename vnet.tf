@@ -12,16 +12,16 @@ resource "azurerm_virtual_network" "example" {
 }
 
 
-module "subnet" {
-  source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
+# module "subnet" {
+#   source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
   
-  subnet_name                       = "exmp_subnet"
+#   subnet_name                       = "exmp_subnet"
   
-  subnet_num                        = 1
+#   subnet_num                        = 1
   
-  addr_prefix                       = "10.0.0.0/24"
+#   addr_prefix                       = "10.0.0.0/24"
 
-  rg_name                           = var.rg_name
+#   rg_name                           = var.rg_name
   
-  vnet_name                         = var.vnet_name 
-}
+#   vnet_name                         = var.vnet_name 
+# }
