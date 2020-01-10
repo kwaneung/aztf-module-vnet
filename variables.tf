@@ -4,7 +4,6 @@ variable "resource_group_name" {
 
 variable "vnet_name" {
   description = "Name of the vnet to create"
-  default     = "acctvnet"
 }
 
 variable "location" {
