@@ -5,24 +5,19 @@ Resource group must be created first.
 
 Example) Create vnet
 ```
-module "vnet1" {
+module "vnet" {
   source                            = "git://github.com/kwaneung/aztf-module-vnet.git"
 
-  prefix                            = "exmp"
+  resource_group_name               = azurerm_resource_group.rg.name
   
-  vnet_name                         = "exmp_vnet"
-  
-  vnet_num                          = 2
-  
-  addr_space                        = ["10.0.0.0/16"]
-  
-  location                          = azurerm_resource_group.{resource group ID}.location
+  vnet_name                         = "websrv"  
 
-  rg_name                           = azurerm_resource_group.{resource group ID}.name
+  location                          = azurerm_resource_group.rg.location
   
-  tag_key                           = "05"
+  address_space                     = "10.0.0.0/16"
 
-  tag_value                         = "this"
-  
+  tags = {
+    test = "vnet_module"
+  }
 }
 ```
