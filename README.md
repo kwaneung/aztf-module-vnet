@@ -20,5 +20,9 @@ module "vnet1" {
 
   rg_name                           = azurerm_resource_group.{resource group ID}.name
   
+  tag_key                           = "05"
+
+  tag_value                         = "this"
+  
 }
 ```
