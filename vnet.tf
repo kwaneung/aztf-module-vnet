@@ -25,7 +25,7 @@ module "subnet" {
 
   rg_name                           = var.rg_name
   
-  vnet_name                         = azurerm_virtual_network.example.name
+  vnet_name                         = var.vnet_name
   
   tag_key                           = "05"
 
