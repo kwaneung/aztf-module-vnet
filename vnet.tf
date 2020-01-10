@@ -14,8 +14,6 @@ resource "azurerm_virtual_network" "example" {
 
 module "subnet" {
   source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
-
-  prefix                            = "exmp"
   
   subnet_name                       = "exmp_subnet"
   
