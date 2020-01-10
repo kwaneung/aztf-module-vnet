@@ -23,7 +23,7 @@ module "subnet" {
   
   addr_prefix                       = "10.0.0.0/24"
 
-  rg_name                           = azurerm_resource_group.rg_test01.name
+  rg_name                           = var.rg_name
   
   vnet_name                         = azurerm_virtual_network.example.name
   
