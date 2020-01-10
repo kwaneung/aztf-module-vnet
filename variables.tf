@@ -1,27 +1,24 @@
 variable "vnet_name" {
-  description = "Vnet name"        
-}
-
-variable "vnet_num" {
-  description = "Number of Vnets to create"        
-}
-
-variable "addr_space" {
-  description = "Vnet address space"        
+  description = "Name of the vnet to create"
+  default     = "acctvnet"
 }
 
 variable "location" {
-  description = "Location"        
+  description = "The location/region where the core network will be created. The full list of Azure regions can be found at https://azure.microsoft.com/regions"
+  default     = "koreacentral"
 }
 
-variable "rg_name" {
-  description = "Resource_group_name"        
+variable "address_space" {
+  description = "The address space that is used by the virtual network."
+  default     = "10.0.0.0/16"
 }
 
-variable "tag_key" {
-  description = "Key name of tag"        
-}
+variable "tags" {
+  description = "The tags to associate with your network and subnets."
+  type        = "map"
 
-variable "tag_value" {
-  description = "Value name of tag"        
+  default = {
+    tag1 = ""
+    tag2 = ""
+  }
 }
